@@ -1,7 +1,7 @@
 /** @typedef {import('@octokit/rest').Octokit} GitHub */
 /** @typedef {import('@octokit/types').Endpoints} Endpoints */
-/** @typedef {Endpoints["GET /repos/{owner}/{repo}/issues"]["response"]} listIssuesResponse  */
-/** @typedef {Endpoints["GET /repos/{owner}/{repo}/milestones"]["response"]} listMilestonesResponse  */
+/** @typedef { Endpoints["GET /repos/{owner}/{repo}/issues"]["response"] } listIssuesResponse  */
+/** @typedef { Endpoints["GET /repos/{owner}/{repo}/milestones"]["response"] } listMilestonesResponse  */
 
 /**
  * @template T
