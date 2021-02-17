@@ -23,12 +23,10 @@
  * @return {Promise<listMilestonesResponse["data"]|undefined>} Promise resolving to milestone, if exists.
  */
 async function getMilestoneByTitle( octokit, owner, repo, title ) {
-	const options = octokit.issues.listMilestones.endpoint.merge( {
-		owner,
-		repo,
-	} );
-
-	const responses = octokit.paginate.iterator( options );
+	const responses = octokit.paginate.iterator(
+		octokit.issues.listMilestones,
+		{ owner, repo }
+	);
 
 	for await ( const response of responses ) {
 		const milestones = response.data;
